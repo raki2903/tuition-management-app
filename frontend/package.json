@@ -1,0 +1,54 @@
+{
+  "name": "tuition-manager",
+  "private": true,
+  "version": "1.0.0",
+  "main": "electron.js",
+  "type": "commonjs",
+
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "electron .",
+    "dist": "npm run build && electron-builder"
+  },
+
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "axios": "^1.13.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "vite": "^8.2.2"
+  },
+
+  "devDependencies": {
+    "electron": "^43.4.1",
+    "electron-builder": "^26.0.0"
+  },
+
+  "build": {
+    "appId": "com.tuitionmanager.app",
+    "productName": "Tuition Manager",
+
+    "files": [
+      "dist/**/*",
+      "electron.js",
+      "package.json"
+    ],
+
+    "extraResources": [
+      {
+        "from": "../backend/dist/tuition-backend.exe",
+        "to": "backend/tuition-backend.exe"
+      }
+    ],
+
+    "win": {
+      "target": "nsis"
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
