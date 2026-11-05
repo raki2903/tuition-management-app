@@ -72,6 +72,29 @@ The application follows a frontend-backend architecture:
 4. **ORM:** SQLAlchemy connects Python code with the database.
 5. **Desktop Layer:** Electron provides the desktop application environment.
 
+## Running the Project
+
+### Backend
+
+1. Navigate to the `backend` directory.
+2. Set up and activate a Python virtual environment.
+3. Install the required Python dependencies.
+4. Start the backend using the project's `run_server.py` entry point.
+
+### Frontend
+
+1. Navigate to the `frontend` directory.
+2. Install dependencies using:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend using the development script configured in `package.json`.
+
+*Note: The exact dependency-installation and start commands depend on the project's current configuration.*
+
+
 
 ## Version Control
 
